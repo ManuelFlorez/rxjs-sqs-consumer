@@ -1,0 +1,30 @@
+{
+  "name": "rxjs-sqs-consumer",
+  "version": "1.0.0",
+  "description": "RXJS SQS CONSUMER",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManuelFlorez/rxjs-sqs-consumer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ManuelFlorez/rxjs-sqs-consumer/issues"
+  },
+  "homepage": "https://github.com/ManuelFlorez/rxjs-sqs-consumer#readme",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.939.0",
+    "rxjs": "^7.8.2"
+  }
+}

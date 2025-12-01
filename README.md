@@ -12,8 +12,8 @@ Ideal para workers o microservicios que procesan colas SQS de forma constante y 
 
 ## 🚀 Instalación
 
-```
-npm install sqs-message-manager
+```bash
+npm install @manuelflorezw/rxjs-sqs-consumer
 ```
 
 ## 🧠 ¿Qué es Manager?
@@ -53,19 +53,19 @@ La clase recibe un objeto __Options__ con las siguientes propiedades:
 
 Propiedad | Tipo | Requerido | Descripción
 --------- | ---- | --------- | -----------
-**queueUrl** | ```string``` | ✔ | URL completa de la cola SQS.
-**handler** | ```(msg: Message) => Promise<void>``` | ✔ | Función que procesa cada mensaje recibido.
-**config** | ```SQSClientConfig``` | ✔ | Configuración del cliente SQS (región, credenciales, etc.).
-**MaxNumberOfMessages** | ```number``` | ✖ | Máx. mensajes por poll (default: 10).
-**WaitTimeSeconds** | ```number``` | ✖ | Long polling en segundos (default: 20).
-**VisibilityTimeout** | ```number``` | ✖ | Tiempo de visibilidad inicial por mensaje (default: 30).
-**heartbeatInterval** | ```number``` | ✖ | Frecuencia en segundos para extender la visibilidad (default: mitad de **VisibilityTimeout**).
-**timeoutTemporaryError** | ```number``` | ✖ | Tiempo de espera tras un error temporal (default: 5000ms).
-**onErrorReceivingMessage** | ```(error) => Promise<void>``` | ✖ | Callback en errores al recibir mensajes.
-**onErrorVisibilityTimeout** | ```(msg, error) => Promise<void>``` | ✖ | Callback cuando falla la extensión de visibilidad.
-**onErrorProccessMessage** | ```(msg, error) => Promise<void>``` | ✖ | Callback cuando falla el procesamiento del mensaje.
-**onErrorConfiguration** | ```(error) => Promise<void>``` | ✖ | Error crítico (cola inexistente, credenciales inválidas).
-**onErrorTemporary** | ```(error) => Promise<void>``` | ✖ | Errores temporales que se reintentan.
+*queueUrl* | ```string``` | ✔ | URL completa de la cola SQS.
+*handler* | ```(msg: Message) => Promise<void>``` | ✔ | Función que procesa cada mensaje recibido.
+*config* | ```SQSClientConfig``` | ✔ | Configuración del cliente SQS (región, credenciales, etc.).
+*MaxNumberOfMessages* | ```number``` | ✖ | Máx. mensajes por poll (default: 10).
+*WaitTimeSeconds* | ```number``` | ✖ | Long polling en segundos (default: 20).
+*VisibilityTimeout* | ```number``` | ✖ | Tiempo de visibilidad inicial por mensaje (default: 30).
+*heartbeatInterval* | ```number``` | ✖ | Frecuencia en segundos para extender la visibilidad (default: mitad de *VisibilityTimeout*).
+*timeoutTemporaryError* | ```number``` | ✖ | Tiempo de espera tras un error temporal (default: 5000ms).
+*onErrorReceivingMessage* | ```(error) => Promise<void>``` | ✖ | Callback en errores al recibir mensajes.
+*onErrorVisibilityTimeout* | ```(msg, error) => Promise<void>``` | ✖ | Callback cuando falla la extensión de visibilidad.
+*onErrorProccessMessage* | ```(msg, error) => Promise<void>``` | ✖ | Callback cuando falla el procesamiento del mensaje.
+*onErrorConfiguration* | ```(error) => Promise<void>``` | ✖ | Error crítico (cola inexistente, credenciales inválidas).
+*onErrorTemporary* | ```(error) => Promise<void>``` | ✖ | Errores temporales que se reintentan.
 
 ## 🫀 Heartbeat (Extensión de visibilidad)
 
@@ -79,7 +79,7 @@ Esto evita que SQS vuelva a entregar el mensaje mientras está siendo procesado.
 
 ## 🛑 Parada limpia
 
-**manager.stop()** detiene el loop solo después de que los mensajes en proceso terminen.
+*manager.stop()* detiene el loop solo después de que los mensajes en proceso terminen.
 
 ```typescript
 process.on('SIGTERM', async () => {

@@ -2,7 +2,7 @@
     "compilerOptions": {
       /* Opciones Básicas */
       "target": "es2020",         /* Especifica la versión del estándar ECMAScript de destino (Node.js 14+ soporta es2020) */
-      "module": "commonjs",       /* Especifica el sistema de módulos de destino (Node.js usa CommonJS por defecto) */
+      "module": "Node16",       /* Especifica el sistema de módulos de destino (Node.js usa CommonJS por defecto) */
       "outDir": "./dist",         /* Directorio de salida para los archivos .js compilados */
       "rootDir": "./src",         /* Especifica el directorio raíz de tus archivos fuente (asumiendo que tu código está en 'src') */
       "esModuleInterop": true,    /* Permite la interoperabilidad entre módulos CommonJS y ES modules */
@@ -20,7 +20,7 @@
       "alwaysStrict": true,       /* Asegura que todos los archivos se compilen en modo estricto */
   
       /* Opciones Avanzadas */
-      "moduleResolution": "node", /* Estrategia de resolución de módulos compatible con Node.js y el SDK de AWS v3 */
+      "moduleResolution": "node16", /* Estrategia de resolución de módulos compatible con Node.js y el SDK de AWS v3 */
       "resolveJsonModule": true,  /* Permite importar archivos .json */
       "sourceMap": true,          /* Genera archivos .map para facilitar la depuración del código fuente */
       "declaration": true,        /* Genera archivos .d.ts de declaración de tipos */

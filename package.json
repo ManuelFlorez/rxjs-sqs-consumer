@@ -1,6 +1,6 @@
 {
   "name": "@manuelflorezw/rxjs-sqs-consumer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "RXJS SQS CONSUMER",
   "main": "index.js",
   "scripts": {

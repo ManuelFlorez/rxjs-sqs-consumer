@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+      /* Opciones Básicas */
+      "target": "es2020",         /* Especifica la versión del estándar ECMAScript de destino (Node.js 14+ soporta es2020) */
+      "module": "commonjs",       /* Especifica el sistema de módulos de destino (Node.js usa CommonJS por defecto) */
+      "outDir": "./dist",         /* Directorio de salida para los archivos .js compilados */
+      "rootDir": "./src",         /* Especifica el directorio raíz de tus archivos fuente (asumiendo que tu código está en 'src') */
+      "esModuleInterop": true,    /* Permite la interoperabilidad entre módulos CommonJS y ES modules */
+      "forceConsistentCasingInFileNames": true, /* Asegura que las mayúsculas/minúsculas en las importaciones sean consistentes */
+      
+      /* Opciones Estrictas y de Calidad de Código */
+      "strict": true,             /* Habilita todas las opciones estrictas */
+      "skipLibCheck": true,       /* Omite la verificación de tipos de archivos de declaración (.d.ts) de librerías */
+      "noImplicitAny": true,      /* Lanza error cuando hay 'any' implícito */
+      "strictNullChecks": true,   /* Lanza error por posibles nulos */
+      "strictFunctionTypes": true, /* Lanza error por tipos de funciones inválidos */
+      "strictBindCallApply": true, /* Habilita comprobaciones estrictas en bind, call y apply */
+      "strictPropertyInitialization": true, /* Asegura que las propiedades de clase se inicializan */
+      "noImplicitThis": true,     /* Lanza error en 'this' implícito */
+      "alwaysStrict": true,       /* Asegura que todos los archivos se compilen en modo estricto */
+  
+      /* Opciones Avanzadas */
+      "moduleResolution": "node", /* Estrategia de resolución de módulos compatible con Node.js y el SDK de AWS v3 */
+      "resolveJsonModule": true,  /* Permite importar archivos .json */
+      "sourceMap": true,          /* Genera archivos .map para facilitar la depuración del código fuente */
+      "declaration": true,        /* Genera archivos .d.ts de declaración de tipos */
+      "removeComments": true,     /* Elimina los comentarios durante la compilación */
+      "experimentalDecorators": true, /* Habilita soporte experimental para decoradores (si los usas) */
+      "emitDecoratorMetadata": true,  /* Emite metadatos de diseño para un emisor decorador experimental (si los usas) */
+      "allowJs": true             /* Permite incluir archivos JavaScript en el proyecto */
+    },
+    "include": [
+      "src/**/*"                  /* Incluye todos los archivos TypeScript y JavaScript dentro de la carpeta src */
+    ],
+    "exclude": [
+      "node_modules",             /* Excluye la carpeta de dependencias */
+      "dist"                      /* Excluye la carpeta de salida */
+    ]
+}
